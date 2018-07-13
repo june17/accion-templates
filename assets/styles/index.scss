@@ -1,0 +1,197 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+@font-face {
+    font-family: WhitneyMed;
+    src: url(Whitney/WhitneyHTF-Medium.otf);
+}
+@font-face {
+    font-family: WhitneySemi;
+    src: url(Whitney/WhitneyHTF-SemiBold.otf);
+}
+@font-face {
+    font-family: WhitneyBold;
+    src: url(Whitney/WhitneyHTF-Bold.otf);
+}
+@font-face {
+    font-family: WhitneyBook;
+    src: url(Whitney/WhitneyHTF-Book.otf);
+}
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: #F7F6F4;}
+
+.headerStats {
+    justify-content: flex-end;
+    padding-top:24px;
+    >span{
+        display: flex;
+        align-items: center;
+        .indicator{
+            height: 32px;
+            width: 32px;
+            background: #ACDECC;
+            margin-right: 12px;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .indicator-inner{
+                height: 16px;
+                width: 16px;
+                border-radius: 100%;
+                background: #00AA71;
+            }
+        }
+
+    }
+    h1{
+        font-size: 36px;
+        font-family: WhitneyBook;
+    }
+    .stats {
+        display: flex;
+        justify-content: flex-end;
+        float: right;
+        span {
+            margin: 0 24px;
+            padding: 0;
+            h2 {
+                margin: 0;
+                font-size: 22px;
+                font-family: WhitneySemi;
+                padding: 0;
+            }
+            p {
+                font-size: 13px;
+                color: #66738A;
+                font-family: WhitneyMed;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.loanImporter {
+    margin: 24px 0;
+    padding: 0;
+
+    .sideBar{
+        min-height: 480px;
+        -ms-flex: 0 0 16.666667%;
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+        font-family: WhitneyMed;
+        ul {
+            margin: 0; 
+            padding: 2px 8px;
+            li{
+            margin: 0;
+            padding: 8px 8px;
+            list-style: none;
+            font-size: 13px;
+            color: #66738A;
+            border-radius: 4px;
+            }
+            li:hover {
+                font-family: WhitneySemi;
+                color: #FA7A22;
+                background: #FEF1E8;
+                cursor: pointer;
+            }
+            li:first-child{
+                margin-top: 16px;
+            }
+        }
+    }
+    .mainContent{
+        font-family: WhitneyMed;
+        -ms-flex: 0 0 calc(83.333333% - 20px);
+        flex: 0 0 calc(83.333333% - 20px);
+        max-width: calc(83.333333% - 20px);
+        margin-left: 20px;
+        padding: 12px 20px;
+        .table{
+            th{
+                font-size: 12px;
+                color: #9F9F9F;
+                text-transform: uppercase;
+            }
+            td{
+                font-size: 14px;
+                color: #253248 !important;
+                border-bottom: 1px solid #F2F2F2 !important;
+                // padding: 0.25rem 0.75rem !important;
+            }
+            tr.fold {
+                display: none;
+                &.open { display:table-row; }
+            }
+            .fold-content{
+                background: #FEF6F5;
+                padding: 2% 10% 1% 10%;
+                h5{
+                    font-size: 12px;
+                    color: #9F9F9F;
+                    font-family: WhitneyMed;
+                    text-transform: uppercase;
+                }
+                h6{
+                    font-size: 13px;
+                    color: #253248;
+                }
+                p{
+                    font-size: 13px;
+                    color: #66738A;
+                    font-family: WhitneyBook;
+                }
+            }
+            .failedImport{
+                color: #E94337 !important;
+                font-size: 12px;
+                font-family: WhitneySemi;
+                text-transform: uppercase;
+            }
+            .successImport{
+                color: #00AA71 !important;
+                font-size: 12px;
+                font-family: WhitneySemi;
+                text-transform: uppercase;
+            }
+            .connecting{
+                font-size: 12px;
+                color: #455571;
+            }
+            .blueButton{
+                background: #0077E1;
+                padding: 4px 10px;
+                border-radius: 4px;
+                font-size: 12px;
+                color: #ffffff;
+            }
+                .blueButton:hover{
+                    cursor: pointer;
+                    background: #1E8EF0;
+                }
+            .errorsButton{
+                font-size: 14px;
+                color: #E94337;
+                text-decoration: underline;
+            }
+        }
+
+    }
+}
+
+.columnPanel {
+    background: #ffffff;
+    padding: 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02), 0 0px 0px rgba(9,30,66,0.2);}
+
+
+

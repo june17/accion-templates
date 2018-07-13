@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row headerStats">
+            <span class="col-md-5">
+                <div class="indicator">
+                    <div class="indicator-inner"></div>
+                </div><h1>Loan Importer</h1>
+            </span>
+            <span class="col-md-7 stats">
+                <span>
+                    <h2>04</h2>
+                    <p>Today</p>
+                </span>
+                <span>
+                    <h2>13</h2>
+                    <p>This week</p>
+                </span>
+                <span>
+                    <h2>23</h2>
+                    <p>This month</p>
+                </span>
+                <span>
+                    <h2>08</h2>
+                    <p>Failed</p>
+                </span>
+            </span>
+        </div>
+        <div class="row loanImporter">
+                <div class="sideBar columnPanel">
+                    <ul>
+                        <li>Today</li>
+                        <li>Yesterday</li>
+                        <li>Jun 05, 2018</li>
+                        <li>June 04, 2018</li>
+                        <li>Jun 03, 2018</li>
+                        <li>June 02, 2018</li>
+                        <li>June 01, 2018</li>
+                    </ul>
+
+                </div>
+                <div class="mainContent columnPanel">
+                <table class="table fold-table">
+                    <thead>
+                        <tr>
+                            <th width="10%">Status</th>
+                            <th width="30%">Borrower</th>
+                            <th width="15%">Loan Number</th>
+                            <th width="40%">Details</th>
+                            <th width="5%"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="failedImport align-middle">Failed</td>
+                            <td>Toyota Holdings</td>
+                            <td>78392</td>
+                            <td class="view"><a href="#" class="errorsButton">32 errors</a></td>
+                            <td><a class="blueButton">Retry</a></td>
+                        </tr>
+                        <tr class="fold">
+                            <td colspan="5">
+                                <div class="fold-content">
+                                <h5>Errors</h5>
+                                <h6>Error Category</h6>
+                                <p>Ethnicity, Gender,Annual House, Annual household income (from survey), Number of people in household (from survey), Referral type, FICO score, Mailing address, Phone number (any of them),  Veteran, Disability, Personal health insurance, Single parent, children in household, children between 0-8, Preferred language</p>       
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="successImport align-middle">Success</td>
+                            <td>Toyota Holdings</td>
+                            <td>78392</td>
+                            <td>12 fields imported</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="connecting">Connecting</td>
+                            <td>Toyota Holdings</td>
+                            <td>78392</td>
+                            <td>12 fields imported</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="failedImport align-middle">Failed</td>
+                            <td>Toyota Holdings</td>
+                            <td>78392</td>
+                            <td><a href="#" class="errorsButton">32 errors</a></td>
+                            <td><a class="blueButton">Retry</a></td>
+                        </tr>
+                        <tr>
+                            <td class="failedImport align-middle">Failed</td>
+                            <td>Toyota Holdings</td>
+                            <td>78392</td>
+                            <td><a href="#" class="errorsButton">32 errors</a></td>
+                            <td><a class="blueButton">Retry</a></td>
+                        </tr>
+                        <tr>
+                            <td class="successImport align-middle">Success</td>
+                            <td>Toyota Holdings</td>
+                            <td>78392</td>
+                            <td>12 fields imported</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+        </div>
+    </div>
+<script>
+$(function(){
+  $(".fold-table td.view").on("click", function(){
+    $(".fold").toggleClass("open");
+  });
+});
+</script>
+</body>
+</html>
